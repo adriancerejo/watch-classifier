@@ -54,6 +54,7 @@ header {
 
 .predictions ul {
   list-style: none;
+  width: 100vw;
 }
 
 .predictions ul li {
@@ -65,13 +66,11 @@ header {
   justify-content: space-evenly;
   margin-left: 35vw;
   margin-top: 75px;
-  width: 30vw;
+  width: 40vw;
 }
 
 .predictions img {
   border-radius: 4px;
-  width: 300px;
-  height: 300px;
 }
 .data {
   display: flex;
