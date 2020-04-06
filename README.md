@@ -1,6 +1,8 @@
 # watch-classifier
 Predicts the brand of a watch given an image using a CNN
 
+![Watch Classification Demo](demo/demo.gif)
+
 At the moment I have not deployed the project because I am having trouble finding a good host and fully understanding 
 how to deploy a project that has specific dependencies. However, you can clone the repo, follow the instructions, and get setup locally
 to try the project out.
