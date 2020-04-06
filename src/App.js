@@ -82,7 +82,9 @@ class App extends Component {
           </Button>
         </div>
         <div className="predictions">
-          <img id="target" src={this.state.imgSrc} />
+          <img id="target" src={this.state.imgSrc} width="400"
+            height="400"
+            alt="" />
           <ul>
             <li>{pred1}</li>
             <li>{pred2}</li>
