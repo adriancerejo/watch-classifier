@@ -1,5 +1,7 @@
 # watch-classifier
-Predicts the brand of a watch given an image using a CNN
+Predicts the brand of a watch given an image using a CNN 
+
+Check out the deployed version here: https://watch-classifier.onrender.com/
 
 ![Watch Classification Demo](demo/demo.gif)
 
@@ -18,7 +20,7 @@ to try the project out.
 8. The project should be setup locally and you can test by uploading a picture to the React page.
 
 ## To-Do
-- [ ] Deploy online
+- [X] Deploy online
 
 ## Issues
 - There seems to be an issue with the image rendering at very large resolution. The fix seems to be to simply open the
