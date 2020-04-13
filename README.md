@@ -21,7 +21,4 @@ to try the project out.
 
 ## To-Do
 - [X] Deploy online
-
-## Issues
-- There seems to be an issue with the image rendering at very large resolution. The fix seems to be to simply open the
-  project in another browser using the same url
+- [ ] Host server and front end on different services rather than render
