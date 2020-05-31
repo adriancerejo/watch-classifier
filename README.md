@@ -1,8 +1,6 @@
 # watch-classifier
 Predicts the brand of a watch given an image using a CNN 
 
-Check out the deployed version here: https://watch-classifier.onrender.com/
-
 ![Watch Classification Demo](demo/demo.gif)
 
 At the moment I have not deployed the project because I am having trouble finding a good host and fully understanding 
