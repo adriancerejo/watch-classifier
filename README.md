@@ -1,4 +1,4 @@
-# watch-classifier
+# Watch Brand Classification Model
 Predicts the brand of a watch given an image using a CNN 
 
 ![Watch Classification Demo](demo/demo.gif)
