@@ -1,6 +1,8 @@
+# libraries needed for web scraping
 require 'watir'
 require 'nokogiri'
 
+# different brands to scrape
 watch_brands = [
     'armani',
     'audemarspiguet',
@@ -21,8 +23,10 @@ watch_brands = [
     'zenith'
 ]
 
+# browser instance
 chrome_browser = Watir::Browser.new(chrome)
 
+# first 5 pages of chrono24 will be scraped per brand
 watch_brands.each do |brand|
     pages = [
     'http://chrono24.com/#{brand}/index.htm',
@@ -32,25 +36,27 @@ watch_brands.each do |brand|
     'http://chrono24.com/#{brand}/index-5.htm'
     ]
 
+    # for each page, visit the website and scroll down halfway to load in paginated images
     pages.each do |page|
         chrome_browser.goto(url)
-        20.times do |x|
-            chrome_browser.execute_script("window.scrollBy(0,800)")
-    end
+        10.times do |x|
+            chrome_browser.execute_script("window.scrollBy(0,750)")
+        end
 
+    # grab the page as html
     html_page = Nokogiri::HTML.parse(chrome_browser.html)
 
+    # access all the images which are kept in divs with the className of article-item-container
     article_item_container = html_page.css(".article-item-container")
+    # for every container access the elements that contain the image
     article_item_container.do |article_item|
         image = article_item.at_css(".article-image-container .content img")
-
-        price = article_item.at_css(".article-price strong").text
-        
+        # store the image url
         image_url = image['src']
-        priceNum = price.gsub(/[^0-9]/, "")
 
+        #open the dataset file and write the image url to a text file 
         File.open("dataset/#{brand}.txt", "a+") do |file|
-            file.puts("#{image_url},#{priceNum}")
+            file.puts("#{image_url}")
         end
     end
 end

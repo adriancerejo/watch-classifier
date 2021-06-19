@@ -44,8 +44,7 @@ for brand in brands:
         for line in f:
             # set name of the image
             link = line.split(',')[0]
-            price = line.split(',')[1]
-            name = brand + "-" + str(unique) + "-" + price
+            name = brand + "-" + str(unique)
             name = path + "\\" + name.replace('\n', '') + ".png"
             download_images(link, name)
             unique += 1
