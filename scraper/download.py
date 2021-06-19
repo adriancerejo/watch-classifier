@@ -3,13 +3,27 @@ import os
 import requests
 
 # set path for download location
-path = os.getcwd() + '\data'
+path = os.getcwd() + '\dataset'
 
 # brand names
 brands = [
-    "fossil",
-    "michaelkors",
-    "guess",
+    'armani',
+    'audemarspiguet',
+    'breitling',
+    'cartier',
+    'fossil',
+    'gucci',
+    'guess',
+    'iwc',
+    'jaegerlecoultre',
+    'michaelkores',
+    'movado',
+    'omega',
+    'panerai',
+    'patekphilippe',
+    'rolex',
+    'seiko',
+    'zenith'
 ]
 
 
